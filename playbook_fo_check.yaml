@@ -1,0 +1,17 @@
+---
+- name: test my new module
+  hosts: localhost
+  tasks:
+    - name: run the nnew module
+      #kaa_my_own_module:
+      kaa.kaa_create_file.kaa_my_own_module:
+      #kaa.kaa_my_own_module:
+        name: 'hello.txt'
+        path: /tmp/folder1/
+        content: 'My Content'
+      register: testout
+    - name: dump test output
+      debug:
+        msg: '{{ testout }}'
+
+

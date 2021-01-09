@@ -1,0 +1,13 @@
+---
+# tasks file for kaa_own_role
+  - name: run the kaa_create_file module
+    #kaa_my_own_module:
+    #kaa.kaa_my_own_module:
+    kaa.kaa_create_file.kaa_module:
+      name: "{{ name }}"
+      path: "{{ path }}"
+      content: "{{ content }}"
+    register: testout
+  - name: dump test output
+    debug:
+      msg: '{{ testout }}'

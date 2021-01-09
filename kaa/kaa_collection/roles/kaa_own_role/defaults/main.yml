@@ -1,0 +1,5 @@
+---
+# defaults file for kaa_own_role
+  name: 'hello.txt'
+  path: /tmp/folder1/
+  content: 'My Content'
